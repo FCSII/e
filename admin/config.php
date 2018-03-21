@@ -25,7 +25,6 @@ define('DIR_MODIFICATION', BASE_DIR. 'system/storage/modification/');
 define('DIR_UPLOAD', BASE_DIR. 'system/storage/upload/');
 define('DIR_CATALOG', BASE_DIR. 'catalog/');
 define('DIR_EXCEL', BASE_DIR. 'system/storage/excel/');
-// define('DIR_EXCEL', BASE_DIR. 'system/storage/excel/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
