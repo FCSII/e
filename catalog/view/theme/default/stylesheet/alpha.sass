@@ -1,0 +1,96 @@
+@import helper
+
+html
+    &,
+    body
+        padding: 0px
+        margin: 0px
+        width: 100%
+        height: 100%
+
+    .max-offset
+        @media (min-width: 768px)
+            +margin-left-right-d(calc(375px - 50vw))
+
+        @media (min-width: 992px)
+            +margin-left-right-d(calc(485px - 50vw))
+ 
+        @media (min-width: 1200px) 
+            +margin-left-right-d(calc(585px - 50vw))  
+
+    h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child
+        margin-top: 0px
+ 
+    *:focus, 
+    *
+        outline: none 
+ 
+    .list-group
+        .input-group 
+            display: table
+            width: 100%
+            position: relative 
+  
+            a
+                border-radius: 0px
+                
+                &:not(:nth-child(1))
+                    border-top: 0px
+                
+                &:not(:only-child)
+                    width: calc(100% - #{$min_size + px})
+
+                & + button::before
+                    content: '+'
+
+                &.active + button::before
+                    content: '-'
+
+            button
+                width: $min_size + px
+
+                border-radius: 0px
+                height: 100%
+
+                @extend .absolute-top-right 
+        
+
+
+        .list-grand-child,
+        .list-child
+            display: none
+
+            &.open
+                display: block
+    
+    .customer-account
+        padding: 0px
+        +margin-left-right(-15)
+
+        i
+            font-size: 36px
+            color: #666666 
+            line-height: 24px
+            padding-bottom: 10px
+            padding-top: 10px
+    
+        & > li 
+            list-style-type: none
+            
+            a
+                font-size: 14px
+                padding: 10px
+                border: 1px solid #EEE
+                margin-bottom: 5px
+                text-align: center
+                color: inherit
+                display: block
+
+                &:hover
+                    background-color: #F29931
+                    cursor: pointer
+                    +transition(background-color 0.3s ease)
+                
+                    i, a
+                        color:#FFFFFF
+           

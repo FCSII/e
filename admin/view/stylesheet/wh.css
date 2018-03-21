@@ -1,0 +1,4 @@
+#form-product .img-thumbnail img{
+    max-height: 50px;
+    min-width: 50px;
+}

@@ -1,0 +1,376 @@
+.transition {
+  transition: all 0.3s ease;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-block-i {
+  display: inline-block !important;
+}
+
+.table {
+  display: table;
+}
+
+@media (max-width: 767px) {
+  .inline-xs {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .inline-xs {
+    display: none !important;
+  }
+}
+
+.m0 {
+  margin: 0px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.fixed, .fixed-top-right, .fixed-top-left, .fixed-bottom-left, .fixed-bottom-right, .fixed-center-center, .fixed-top-center, .fixed-bottom-center, .fixed-center-left, .fixed-center-right {
+  top: 0px;
+  left: 0px;
+  position: fixed;
+}
+
+.fixed-top-right {
+  top: 0px;
+  right: 0px;
+  left: auto;
+}
+
+.fixed-top-left {
+  top: 0px;
+  left: 0px;
+}
+
+.fixed-bottom-left {
+  bottom: 0px;
+  left: 0px;
+}
+
+.fixed-bottom-right {
+  bottom: 0px;
+  right: 0px;
+  left: auto;
+}
+
+.fixed-center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-top-center {
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fixed-bottom-center {
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fixed-center-left {
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.fixed-center-right {
+  top: 50%;
+  right: 0px;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute, .absolute-top-right, .absolute-top-left, .absolute-bottom-left, .absolute-bottom-right, .absolute-center-center, .absolute-top-center, .absolute-bottom-center, .absolute-center-left, .absolute-center-right {
+  position: absolute;
+}
+
+.absolute-top-right {
+  top: 0px;
+  right: 0px;
+  left: auto;
+}
+
+.absolute-top-left {
+  top: 0px;
+  left: 0px;
+}
+
+.absolute-bottom-left {
+  bottom: 0px;
+  left: 0px;
+}
+
+.absolute-bottom-right {
+  bottom: 0px;
+  right: 0px;
+  left: auto;
+}
+
+.absolute-center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-top-center {
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-bottom-center {
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-center-left {
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.absolute-center-right {
+  top: 50%;
+  right: 0px;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 1200px) {
+  .column-lg-5 > * {
+    width: calc(50% / 5);
+    clear: none;
+  }
+  .column-lg-5 > *:nth-child(5n + 1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .column-md-5 > * {
+    width: calc(50% / 5);
+    clear: none;
+  }
+  .column-md-5 > *:nth-child(5n + 1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .column-sm-5 > * {
+    width: calc(50% / 5);
+    clear: none;
+  }
+  .column-sm-5 > *:nth-child(5n + 1) {
+    clear: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .column-xs-5 > * {
+    width: calc(50% / 5);
+    clear: none;
+  }
+  .column-xs-5 > *:nth-child(5n + 1) {
+    clear: left;
+  }
+}
+
+.min-height-0 {
+  min-height: 0px !important;
+}
+
+.gmap {
+  width: 100% !important;
+  height: 400px;
+}
+
+/* Bootstrap correction */
+.panel-title > a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-heading {
+  padding: 0;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+  height: auto !important;
+}
+
+.round {
+  border-radius: 50px;
+}
+
+.is-link {
+  border: 0px;
+  background: transparent;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.lighter {
+  font-weight: 300;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold, .control-label {
+  font-weight: 700;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lh100 {
+  line-height: 100%;
+}
+
+.btn,
+a[href],
+.pointer {
+  cursor: pointer;
+}
+
+.margin-auto, .clone-container {
+  margin: auto;
+}
+
+.t12 {
+  font-size: 12px !important;
+}
+
+.t14, select.form-control, textarea.form-control, input[type="text"].form-control, input[type="password"].form-control, input[type="datetime"].form-control, input[type="datetime-local"].form-control, input[type="date"].form-control, input[type="month"].form-control, input[type="time"].form-control, input[type="week"].form-control, input[type="number"].form-control, input[type="email"].form-control, input[type="url"].form-control, input[type="search"].form-control, input[type="tel"].form-control, input[type="color"].form-control, .control-label {
+  font-size: 14px !important;
+}
+
+.t16 {
+  font-size: 16px !important;
+}
+
+.t18 {
+  font-size: 18px !important;
+}
+
+.t20 {
+  font-size: 20px !important;
+}
+
+.t22 {
+  font-size: 22px !important;
+}
+
+.t24 {
+  font-size: 24px !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .text-right-sm {
+    text-align: right;
+  }
+}
+
+.fcs::before {
+  content: url("../image/fcs.png");
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.fcs a {
+  color: #1365a2 !important;
+}
+
+#ToTop {
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .clone-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .clone-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clone-container {
+    width: 1170px;
+  }
+}
+
+.white-bg {
+  background-color: #fff !important;
+}
+
+.sharp_edge {
+  border-radius: 0px !important;
+}
+
+/* Overwrite */
+select.form-control, textarea.form-control, input[type="text"].form-control, input[type="password"].form-control, input[type="datetime"].form-control, input[type="datetime-local"].form-control, input[type="date"].form-control, input[type="month"].form-control, input[type="time"].form-control, input[type="week"].form-control, input[type="number"].form-control, input[type="email"].form-control, input[type="url"].form-control, input[type="search"].form-control, input[type="tel"].form-control, input[type="color"].form-control {
+  box-shadow: none;
+  border-radius: 0px;
+  border: 1px solid #ebebeb;
+  min-height: 42px;
+}

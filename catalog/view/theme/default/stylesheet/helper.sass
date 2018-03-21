@@ -1,0 +1,377 @@
+$min_size: 38
+
+@function is-percentage($value) 
+    @return is-number($value) and unit($value) == '%'
+
+=square($px)
+    @if is-percentage($px)
+        width: $px 
+        height: $px 
+    @else
+        width: $px + px 
+        height: $px + px 
+
+=square_math($px)
+    width: $px
+    height: $px
+
+.transition
+    transition: all 0.3s ease
+
+.inline
+    display: inline
+
+.block
+    display: block
+
+.inline-block
+    display: inline-block
+
+.inline-block-i
+    display: inline-block !important
+
+.table
+    display: table
+
+@media (max-width: 767px)
+    .inline-xs
+        display: inline !important
+
+@media (min-width: 768px)
+    .inline-xs
+        display: none !important
+
+.m0
+    margin: 0px
+
+.w100
+    width: 100%
+
+.fixed
+    top: 0px
+    left: 0px
+    position: fixed
+
+.fixed-top-right
+    @extend .fixed
+    top: 0px 
+    right: 0px
+    left: auto
+
+.fixed-top-left
+    @extend .fixed
+    top: 0px 
+    left: 0px
+
+.fixed-bottom-left
+    @extend .fixed
+    bottom: 0px 
+    left: 0px
+
+.fixed-bottom-right
+    @extend .fixed
+    bottom: 0px 
+    right: 0px
+    left: auto
+
+.fixed-center-center
+    @extend .fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.fixed-top-center
+    @extend .fixed
+    top: 0px
+    left: 50%
+    transform: translateX(-50%)
+
+.fixed-bottom-center
+    @extend .fixed
+    bottom: 0px
+    left: 50%
+    transform: translateX(-50%)
+
+.fixed-center-left
+    @extend .fixed
+    top: 50%
+    left: 0px
+    transform: translateY(-50%)
+
+.fixed-center-right
+    @extend .fixed
+    top: 50%
+    right: 0px
+    left: auto
+    transform: translateY(-50%)
+
+.relative
+    position: relative
+
+.absolute
+    position: absolute
+
+.absolute-top-right
+    @extend .absolute
+    top: 0px 
+    right: 0px
+    left: auto
+
+.absolute-top-left
+    @extend .absolute
+    top: 0px 
+    left: 0px
+
+.absolute-bottom-left
+    @extend .absolute
+    bottom: 0px 
+    left: 0px
+
+.absolute-bottom-right
+    @extend .absolute
+    bottom: 0px 
+    right: 0px
+    left: auto
+
+.absolute-center-center 
+    @extend .absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.absolute-top-center
+    @extend .absolute
+    top: 0px
+    left: 50%
+    transform: translateX(-50%)
+
+.absolute-bottom-center
+    @extend .absolute
+    bottom: 0px
+    left: 50%
+    transform: translateX(-50%)
+
+.absolute-center-left
+    @extend .absolute
+    top: 50%
+    left: 0px
+    transform: translateY(-50%)
+
+.absolute-center-right
+    @extend .absolute
+    top: 50%
+    right: 0px
+    left: auto
+    transform: translateY(-50%)
+
+=transition($command)
+    -webkit-transition: $command
+    -moz-transition: $command
+    -o-transition: $command
+    transition: $command
+  
+=margin-left-right($px)
+    margin-left: $px + px
+    margin-right: $px + px
+
+=margin-left-right-d($px)
+    margin-left: $px
+    margin-right: $px
+  
+
+=margin-left-right-i($px)
+    margin-left: $px + px i()
+    margin-right: $px + px i()
+  
+=margin-top-bottom($px)
+    margin-top: $px + px
+    margin-bottom: $px + px
+
+=margin-top-bottom-d($px)
+    margin-top: $px
+    margin-bottom: $px
+
+@media (min-width: 1200px)
+    .column-lg-5 > *
+        width: calc(50% / 5)
+        clear: none
+
+    .column-lg-5 > *:nth-child(5n + 1)
+        clear: left
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .column-md-5 > *
+        width: calc(50% / 5)
+        clear: none
+
+    .column-md-5 > *:nth-child(5n + 1)
+        clear: left
+
+@media (min-width: 768px) and (max-width: 991px)
+    .column-sm-5 > *
+        width: calc(50% / 5)
+        clear: none
+
+    .column-sm-5 > *:nth-child(5n + 1)
+        clear: left
+
+@media (max-width: 768px)
+    .column-xs-5 > *
+        width: calc(50% / 5)
+        clear: none
+
+    .column-xs-5 > *:nth-child(5n + 1)
+        clear: left
+
+.min-height-0
+    min-height: 0px !important
+
+.gmap
+    width: 100% !important
+    height: 400px
+
+/* Bootstrap correction */
+.panel-title > a
+    display: block
+    padding: 10px 15px
+
+.panel-heading
+    padding: 0
+
+a:hover,
+a:focus,
+a:visited,
+a
+    text-decoration: none
+    outline: none
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img
+    height: auto !important
+
+.round
+    border-radius: 50px
+
+.is-link
+    border: 0px
+    background: transparent
+
+.thin
+    font-weight: 100
+
+.light
+    font-weight: 200
+
+.lighter
+    font-weight: 300
+
+.normal
+    font-weight: 400
+
+.semibold
+    font-weight: 600
+
+.bold
+    font-weight: 700
+
+.strong
+    font-weight: 800
+
+.upper
+    text-transform: uppercase
+
+.lh100
+    line-height: 100%
+
+.btn,
+a[href],
+.pointer
+    cursor: pointer
+
+.margin-auto
+    margin: auto
+
+=padding-top-bottom($x)
+    padding-top: $x + px
+    padding-bottom: $x + px
+
+=padding-left-right($x)
+    padding-left: $x + px
+    padding-right: $x + px
+
+@function image($image)
+    @return url('../image/' + $image)
+
+@function i()
+    @return !important
+
+.t12
+    font-size: 12px i()
+
+.t14
+    font-size: 14px i()
+
+.t16
+    font-size: 16px i()
+
+.t18
+    font-size: 18px i()
+
+.t20
+    font-size: 20px i()
+
+.t22
+    font-size: 22px i()
+
+.t24
+    font-size: 24px i()
+
+.underline
+    text-decoration: underline
+
+
+@media (min-width: 768px)
+    .text-right-sm
+        text-align: right 
+
+
+.fcs
+    &::before
+        content: url('../image/fcs.png')
+        vertical-align: middle
+        display: inline-block
+        margin-right: 5px
+    
+    a
+        color: #1365a2 i()
+    
+#ToTop
+    z-index: 10
+
+.clone-container
+    @extend .margin-auto
+
+    @media (min-width: 768px)
+        width: 750px
+    @media (min-width: 992px)
+        width: 970px
+    @media (min-width: 1200px)
+        width: 1170px
+    
+.white-bg
+    background-color: #fff i()
+
+.sharp_edge
+    border-radius: 0px i()
+
+/* Overwrite */
+$border_color: #ebebeb
+
+select.form-control, textarea.form-control, input[type="text"].form-control, input[type="password"].form-control, input[type="datetime"].form-control, input[type="datetime-local"].form-control, input[type="date"].form-control, input[type="month"].form-control, input[type="time"].form-control, input[type="week"].form-control, input[type="number"].form-control, input[type="email"].form-control, input[type="url"].form-control, input[type="search"].form-control, input[type="tel"].form-control, input[type="color"].form-control
+    @extend .t14 
+    box-shadow: none
+    border-radius: 0px
+    border: 1px solid $border_color
+    min-height: 42px
+
+.control-label
+    @extend .bold, .t14
